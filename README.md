@@ -1,22 +1,27 @@
 # Mysql_OracleStudy
 
-## 📘 SQL 실습 문제 모음
+## 📘 Oracle 문제 만들어서 풀기
+
+### 내가 만든 문제  
+커미션이 NULL이 아닌 직원을 가진 부서에 속한 사원 중,  
+이름의 마지막 글자가 'N'인 사원의 부서 코드와 사원명을 출력  
+컬럼명은 "부서 코드", "사원명"
 
 ```sql
--- 내가 만든 문제
--- 커미션이 NULL이 아닌 직원을 가진 부서에 속한 사원 중
--- 이름의 마지막 글자가 'N'인 데이터를 "부서 코드", "사원명" 컬럼명으로 출력
 SELECT deptno AS "부서 코드", ename AS "사원명"
 FROM emp
 WHERE comm IS NOT NULL AND ename LIKE '%N';
 
 
--- 민지님 문제
--- 각 부서 별 월급 평균, 부서 번호 출력 (부서 번호 오름차순)
+
+### 민지님 문제
+각 부서 별 월급 평균, 부서 번호 출력 (부서 번호 오름차순)
+
 SELECT AVG(sal) AS 평균월급, deptno AS 부서번호
 FROM emp
 GROUP BY deptno
 ORDER BY deptno;
+
 
 
 -- 소영님 문제

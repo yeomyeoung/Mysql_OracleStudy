@@ -18,7 +18,7 @@ SAL + COMM 총합 평균보다 높은 사람을 조회
 COMM이 NULL이면 0으로 간주
 
 ```sql
--- 여명님 문제
+-- 내 문제
 SELECT deptno AS "부서 코드", ename AS "사원명"
 FROM emp
 WHERE comm IS NOT NULL AND ename LIKE '%N';
